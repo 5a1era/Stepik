@@ -8,18 +8,21 @@ public class ReversArrayList {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             ArrayList<Integer> arrayList = new ArrayList<>();
-            String n = scanner.next();
-            for (int i = 0; i < Integer.valueOf(n); i++) {
-                arrayList.add(Integer.parseInt(scanner.next()));
+            int n = scanner.nextInt();
+            for (int i = 0; i < n; i++) {
+                arrayList.add(scanner.nextInt());
             }
-            String m = scanner.next();
-            for (int i = 0; i < Integer.valueOf(m); i++) {
-                arrayList.add(Integer.parseInt(scanner.next()));
+            n = scanner.nextInt();
+            for (int i = 0; i < n; i++) {
+                arrayList.add(scanner.nextInt());
             }
 
             Collections.sort(arrayList);
             Collections.reverse(arrayList);
-            System.out.print(arrayList);
+            for (int i : arrayList) {
+                System.out.print(i + " ");
+            }
+
 
         }
 
